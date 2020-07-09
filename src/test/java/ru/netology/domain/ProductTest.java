@@ -16,4 +16,62 @@ class ProductTest {
         assertTrue(actual);
     }
 
+    @Test
+    void matchesIncorrectBookName() {
+        boolean actual = book1.matches("Children of the Dune");
+        assertFalse(actual);
+    }
+
+    @Test
+    void matchesCorrectPhoneName() {
+        boolean actual = phone1.matches("One");
+        assertTrue(actual);
+    }
+
+    @Test
+    void matchesIncorrectPhoneName() {
+        boolean actual = phone1.matches("XOne");
+        assertFalse(actual);
+    }
+
+    @Test
+    void matchesCorrectPhoneVendor() {
+        boolean actual = phone1.matches("OnePlus");
+        assertTrue(actual);
+    }
+
+    @Test
+    void matchesIncorrectPhoneVendor() {
+        boolean actual = phone1.matches("Oppo");
+        assertFalse(actual);
+    }
+
+    @Test
+    void matchesCorrectProductName() {
+        boolean actual = product1.matches("Anything");
+        assertTrue(actual);
+    }
+
+    @Test
+    void matchesIncorrectProductName() {
+        boolean actual = product1.matches("Everything");
+        assertFalse(actual);
+    }
+
+    @Test
+    void matchesCorrectAuthor() {
+        boolean actual = book1.matches("Herbert");
+        assertTrue(actual);
+    }
+
+    @Test
+    void matchesIncorrectAuthor() {
+        boolean actual = book1.matches("Gibson");
+        assertFalse(actual);
+    }
+
+
+
+
+
 }
