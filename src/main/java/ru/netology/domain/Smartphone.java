@@ -13,4 +13,12 @@ public class Smartphone extends Product {
         this.vendor = vendor;
     }
 
+    public boolean matches(String search) {
+        if (super.matches(search)) {
+            return true;
+        }
+        return this.vendor.equalsIgnoreCase(search);
+
+    }
+
 }
