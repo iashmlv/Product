@@ -41,7 +41,7 @@ class ProductManagerTest {
     @Test
     void shouldReturnPhone2Name() {
         Product[] actual = manager.searchBy("Two");
-        Product[] expected = new Product[]{phone1};
+        Product[] expected = new Product[]{phone2};
 
         assertArrayEquals(expected, actual);
     }
@@ -49,7 +49,7 @@ class ProductManagerTest {
     @Test
     void shouldReturnPhone3Name() {
         Product[] actual = manager.searchBy("Three");
-        Product[] expected = new Product[]{phone1};
+        Product[] expected = new Product[]{phone3};
 
         assertArrayEquals(expected, actual);
     }
